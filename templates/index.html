@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المساعد القانوني</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>👨‍⚖️ المساعد القانوني</h1>
+        <div id="chat-box">
+            {% if response %}
+                <div class="bot-message">{{ response|safe }}</div>
+            {% endif %}
+        </div>
+        <form method="POST">
+            <input type="text" name="query" id="user-input" placeholder="📝 اكتب استشارتك هنا..." required>
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
+</body>
+</html>
