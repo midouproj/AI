@@ -1,78 +1,88 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Tajawal', sans-serif;
+    background-color: #1e1e2f;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: white;
 }
 
 .chat-container {
     width: 90%;
-    max-width: 600px;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    max-width: 700px;
+    background: #2a2a3a;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 85vh;
+    border: 1px solid #3a3a4a;
 }
 
 h1 {
     text-align: center;
-    background: #7787a5;
+    background: linear-gradient(135deg, #7787a5, #5a6780);
     color: white;
-    padding: 15px;
+    padding: 20px;
     margin: 0;
+    font-size: 22px;
 }
 
 #chat-box {
     flex-grow: 1;
-    padding: 15px;
+    padding: 20px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    background: #eef0f4;
+    gap: 15px;
+    background: #1e1e2f;
+    border-bottom: 1px solid #3a3a4a;
 }
 
 .bot-message {
-    background: #7787a5;
+    background: #4a4a6a;
     color: white;
-    padding: 10px 15px;
-    border-radius: 10px;
-    max-width: 80%;
+    padding: 12px 18px;
+    border-radius: 12px;
+    max-width: 75%;
     align-self: flex-start;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 form {
     display: flex;
     padding: 15px;
-    background: white;
-    border-top: 1px solid #ddd;
+    background: #2a2a3a;
+    border-top: 1px solid #3a3a4a;
 }
 
 input {
     flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid #4a4a6a;
+    border-radius: 8px;
     font-size: 16px;
+    background: #1e1e2f;
+    color: white;
+    outline: none;
 }
 
 button {
-    background: #7787a5;
+    background: linear-gradient(135deg, #7787a5, #5a6780);
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 18px;
     margin-left: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background: #5a6780;
+    background: linear-gradient(135deg, #5a6780, #7787a5);
 }
