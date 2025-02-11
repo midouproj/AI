@@ -1,67 +1,75 @@
+/* استايل عام للصفحة */
 body {
-    font-family: 'Tajawal', sans-serif;
-    background-color: #1e1e2f;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #7787a5, #5a6d8a);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: white;
-    padding: 0 20cm;
+    direction: rtl;
 }
 
+/* حاوية الشات */
 .chat-container {
-    width: 100%;
-    height: 100vh;
+    background: white;
+    width: 400px;
+    max-width: 90%;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
 }
 
+/* صندوق الرسائل */
 #chat-box {
-    flex-grow: 1;
-    padding: 20px 0;
+    height: 300px;
     overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: #1e1e2f;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* رسالة البوت */
+.bot-message {
+    background: #e3f2fd;
+    color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    max-width: 80%;
+}
+
+/* نموذج الإدخال */
 form {
     display: flex;
-    padding: 15px 0;
-    background: #1e1e2f;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-input {
-    flex-grow: 1;
-    padding: 20px;
-    border: 1px solid #4a4a6a;
-    border-radius: 8px;
-    font-size: 20px;
-    background: #1e1e2f;
-    color: white;
-    outline: none;
+/* حقل الإدخال */
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
 }
 
+/* زر الإرسال */
 button {
-    background: none;
-    border: none;
-    padding: 12px 18px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #007bff;
     color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-button::after {
-    content: '\1F4E9'; /* رمز التلغرام */
-    font-size: 32px;
+button:hover {
+    background: #0056b3;
 }
-
