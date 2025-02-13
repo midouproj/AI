@@ -1,75 +1,226 @@
-/* استايل عام للصفحة */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #7787a5, #5a6d8a);
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    direction: rtl;
+    padding: 20px;
 }
 
-/* حاوية الشات */
 .chat-container {
-    background: white;
-    width: 400px;
-    max-width: 90%;
-    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* صندوق الرسائل */
+h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px cyan;
+}
+
 #chat-box {
-    height: 300px;
+    height: 250px;
     overflow-y: auto;
     padding: 10px;
     border-radius: 10px;
-    background: #f8f9fa;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
 }
 
-/* رسالة البوت */
 .bot-message {
-    background: #e3f2fd;
-    color: #333;
+    background: rgba(0, 255, 255, 0.2);
     padding: 10px;
     border-radius: 10px;
-    margin: 5px 0;
-    max-width: 80%;
+    text-align: right;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-/* نموذج الإدخال */
 form {
     display: flex;
+    margin-top: 15px;
     gap: 10px;
-    margin-top: 10px;
 }
 
-/* حقل الإدخال */
-#user-input {
+input {
     flex: 1;
     padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-/* زر الإرسال */
-button {
-    background: #007bff;
-    color: white;
     border: none;
-    padding: 10px 15px;
     border-radius: 10px;
-    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
     font-size: 16px;
+    outline: none;
     transition: 0.3s;
 }
 
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 5px cyan;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: cyan;
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px cyan;
+}
+
 button:hover {
-    background: #0056b3;
+    background: #00d4ff;
+    box-shadow: 0 0 15px cyan;
+}
+
+/* أنيميشن التدرج عند ظهور العناصر */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* تنسيق عام */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+}
+
+/* شريط التنقل */
+.navbar {
+    background-color: #7787a5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icons i {
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+/* المساعد القانوني */
+.chat-container {
+    width: 50%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#chat-box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    min-height: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.bot-message {
+    text-align: right;
+    background: #d1e7dd;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #7787a5;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a6783;
 }
