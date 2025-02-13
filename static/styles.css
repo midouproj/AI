@@ -24,9 +24,14 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    border-radius: 30px;
-    width: 95%;
-    margin: 20px auto;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 10px; /* يترك مسافة صغيرة من الأعلى */
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -76,14 +81,14 @@ body {
 
 /* المساعد القانوني */
 .chat-container {
-    width: 50%;
+    width: 90%;
     max-width: 500px;
     background: white;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 20px;
+    margin-top: 80px; /* تترك مسافة بعد شريط التنقل */
 }
 
 h1 {
@@ -101,15 +106,6 @@ h1 {
     background-color: #f9f9f9;
     overflow-y: auto;
     height: 250px;
-}
-
-.bot-message {
-    text-align: right;
-    background: #d1e7dd;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 5px;
-    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
 /* نموذج الإدخال */
@@ -149,3 +145,22 @@ button {
 button:hover {
     background-color: #5a6783;
 }
+
+/* تحسين التجاوب مع الهواتف */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    .chat-container {
+        width: 95%;
+    }
+
