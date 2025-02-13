@@ -9,7 +9,7 @@
 
 /* تنسيق عام */
 body {
-    background: url('static/pp.jpeg') no-repeat center center fixed;
+    background: url('static/pp.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #000;
     display: flex;
