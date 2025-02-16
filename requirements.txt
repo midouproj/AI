@@ -5,3 +5,5 @@ openpyxl==3.1.2
 torch==2.0.1
 transformers==4.37.2
 sentence-transformers==2.2.2
+huggingface_hub==0.17.3
+pyarrow
