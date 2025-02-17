@@ -63,5 +63,5 @@ def index():
     return render_template("index.html", response=response)
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # تعيين المنفذ
+    port = int(os.environ.get("PORT", 8080))  # تعيين المنفذ الافتراضي لبيئة Render
     app.run(host="0.0.0.0", port=port, debug=True)
